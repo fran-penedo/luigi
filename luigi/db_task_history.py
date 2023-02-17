@@ -83,7 +83,7 @@ class DbTaskHistory(task_history.TaskHistory):
         Base.metadata.create_all(self.engine)
         self.tasks = {}  # task_id -> TaskRecord
 
-        _upgrade_schema(self.engine)
+        # _upgrade_schema(self.engine)
 
     def task_scheduled(self, task):
         htask = self._get_task(task, status=PENDING)
